@@ -1,25 +1,44 @@
-import logo from './logo.svg';
+
 import './App.css';
+fetch('https://random-words-api.vercel.app/word')
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(jsonResult){
+    console.log('itworked!', jsonResult);
+  })
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>testing api</h1>
     </div>
   );
+  
 }
 
+
+
 export default App;
+
+
+//NAMER: pseudo code
+//Homepage with NAMER title and purpose of the app in an h2
+// Input field for user to type in any name, word, nickname or number they wish to start their gamer tag with.
+// A button below the imput that says 'generate'
+ //-button has an eventlistener added to it to pull the random word from the api
+ //pair user input with api data
+// name tag results generates on the page in a seprate container below the button in a list form
+
+
+
+//stretch goals
+//the user can like the generated gamertag
+//user can close out generated tags they do not like
+// multiple tags show up on the page
+//the user can input many different names one after another to populate the page
+//when the button is pushed an animation happens
+//liked tags are stored in a list like a shopping bag
