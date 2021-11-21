@@ -1,23 +1,14 @@
-
-import './App.css';
-fetch('https://random-words-api.vercel.app/word')
-  .then(function(response){
-    return response.json();
-  })
-  .then(function(jsonResult){
-    console.log('itworked!', jsonResult);
-  })
-
-
-
+import Api from './Api.js';
+import './app.css';
+// const [data, setData] = useState([]);
 
 function App() {
-  return (
-    <div className="App">
-      <h1>testing api</h1>
-    </div>
-  );
   
+
+  return <div className="App">
+    <Api />
+    </div> 
+
 }
 
 

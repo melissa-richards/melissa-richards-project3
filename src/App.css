@@ -1,38 +1,151 @@
-.App {
-  text-align: center;
+body {
+    border: 20px solid lime;
+    border-image: linear-gradient(35deg, rgb(47, 0, 255), rgb(255, 255, 255)) 1;
+    height: 100vh;
+    background-image: url(./assets/backgroundImageNamer.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wrapper {
+    width: 68%;
+    height: 90%;
+    margin: 0 auto;
+    border: 2px solid lime;
+    border-image: linear-gradient(45deg, rgb(1, 26, 255), rgb(224, 47, 255)) 1;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1 {
+    width: 200px;
+    height: 8%;
+    font-size: 3rem;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    text-shadow: 
+        0.05em 0 0 rgb(255, 47, 57, 0.75), 
+        -0.05em -0.025em 0 rgb(0, 38, 255, 0.75),
+        -0.025em 0.025em 0 rgb(60, 177, 14, 0.75);
+    
+        animation: glitch 1500ms infinite;
+    }
+
+@keyframes glitch {
+    0% {
+    text-shadow:
+        0.05em 0 0 rgb(255, 47, 57, 0.75), 
+        -0.05em -0.025em 0 rgb(0, 38, 255, 0.75),
+        -0.025em 0.025em 0 rgb(60, 177, 14, 0.75);
+    }
+    9% {
+    text-shadow:
+        0.05em 0 0 rgb(255, 0, 255, 0.75), 
+        -0.05em -0.025em 0 rgb(0, 38, 255, 0.75),
+        -0.025em 0.025em 0 rgb(60, 177, 14, 0.75);
+    }
+    10% {
+    text-shadow:
+        -0.05em -0.025 0 rgb(255, 0, 255, 0.75), 
+        0.025em 0.025em 0 rgb(0, 38, 255, 0.75),
+        -0.02em -0.02em 0 rgb(60, 177, 14, 0.75);
+    }
+    50% {
+    text-shadow:
+        -0.05em -0.025 0 rgb(255, 0, 255, 0.75), 
+        0.025em 0.025em 0 rgb(0, 38, 255, 0.75),
+        -0.02em -0.02em 0 rgb(60, 177, 14, 0.75);
+    }
+    60% {
+    text-shadow:
+        -0.05em -0.025 0 rgb(255, 0, 255, 0.75), 
+        0.025em 0.025em 0 rgb(0, 38, 255, 0.75),
+        -0.02em -0.02em 0 rgb(60, 177, 14, 0.75);
+    }
+    61% {
+    text-shadow:
+        -0.025em 0 0 rgb(255, 0, 255, 0.75), 
+        -0.025em -0.025em 0 rgb(0, 38, 255, 0.75),
+        -0.025em -0.05em 0 rgb(60, 177, 14, 0.75);
+    }
+    99% {
+    text-shadow:
+        0.025em 0.05 0 rgb(255, 0, 255, 0.75), 
+        0.05em 0 0 rgb(0, 38, 255, 0.75),
+        0 -0.05em 0 rgb(60, 177, 14, 0.75);
+    }
+    100% {
+    text-shadow:
+        
+        0.025em 0.05 0 rgba(255, 0, 255, 0.75), 
+        0.05em 0 0 rgb(0, 38, 255, 0.75),
+        0 -0.05em 0 rgb(60, 177, 14, 0.75);
+    }
 }
 
-.App-link {
-  color: #61dafb;
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+    margin: 0 auto;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
+
+form button {
+    color: black;
+    box-shadow: 4px 4px 0px black;
+    background: lime;
+    border: none;
+    padding: 10px;
+    font-family: Impact;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: inherit;
+}
+
+p {
+    color: magenta;
+    box-shadow: 4px 4px 0px black;
+    border: 3px solid rgb(183, 0, 255);
+    border-image: linear-gradient(45deg, turquoise, greenyellow) 1;
+    font-family: Impact;
+    padding: 25px;
+    margin: 30px;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+label {
+    font-family: 'M PLUS 1';
+    color: lime;
+    background-color: black;
+    text-transform: uppercase;
+    padding: 5px;
+}
+
+input {
+    margin: 30px;
+    height: 37px;
+    border: 3px solid black;
+    box-shadow: 2px 2px 0px black;
+    text-transform: uppercase;
+    font-family: Impact;
+    text-align: center;
+    color: lime;
+}
+
