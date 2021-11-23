@@ -1,5 +1,5 @@
 import React from "react";
-import './app.css';
+import './App.css';
 import { Button } from "./components/button";
 import TextInput from "./components/textInput"
 import useCustomHook from './hooks/useCustomHook'
