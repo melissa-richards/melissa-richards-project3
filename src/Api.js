@@ -7,7 +7,7 @@ import useCustomHook from './hooks/useCustomHook'
 
 function Api() {
 
-    const { randomWord, setRandomWord, userInput, setUserInput, apiGet, handleSubmit, clearInput, handleInput} = useCustomHook()
+    const { randomWord, userInput, apiGet, handleSubmit, clearInput, handleInput} = useCustomHook()
 
 
     return (
