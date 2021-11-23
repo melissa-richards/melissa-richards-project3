@@ -1,0 +1,13 @@
+.button {
+    color: black;
+    box-shadow: 4px 4px 0px black;
+    background: lime;
+    border: none;
+    padding: 10px;
+    font-family: Impact;
+    font-size: 1.2rem;
+    cursor: pointer;
+    outline: inherit;
+    margin-top: 10px;
+    width: 100%;
+}

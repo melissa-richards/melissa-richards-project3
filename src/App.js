@@ -6,7 +6,12 @@ function App() {
   
 
   return <div className="App">
-    <Api />
+      <div className="wrapper">
+        <header>
+          <h1>Namer</h1>
+        </header>
+        <Api />
+      </div>
     </div> 
 
 }

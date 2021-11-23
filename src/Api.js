@@ -1,71 +1,36 @@
-//put imputs at the top
 import React from "react";
-import { useState } from 'react';
 import './app.css';
+import { Button } from "./components/button";
+import TextInput from "./components/textInput"
+import useCustomHook from './hooks/useCustomHook'
 
-//a function to hold my api, submit gets the calue calls the api then returns it 
 
 function Api() {
 
-    const [randomWord, setRandomWord] = useState('')
-
-
-
-    const apiGet = () => {
-        fetch('https://random-words-api.vercel.app/word')
-            .then((response) => response.json())
-            .then((json) => {
-                console.log(json);
-                console.log(json[0].word);
-                setRandomWord(json[0].word);
-            });
-        };
-        console.log(randomWord);
-
-
-    // this event will fire everytime there is a change in the input it is attached to 
-    // const handleChange = (event) => {
-    //     //get react to updat the state of APP component and set it to whatever is curently the value of the input field
-    //     setUserInput(event.target.value);
-        
-    // }
-    
-
-
-    const [userInput, setUserInput] = useState('');
-
-    //a function to take in the event object and refrence it on the form
-    //prefent it from refreshing
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        //create a new object to store the name
-        const nameTag = { userInput };
-        console.log({ nameTag }, JSON.stringify(nameTag));
-    }
+    const { randomWord, setRandomWord, userInput, setUserInput, apiGet, handleSubmit, clearInput, handleInput} = useCustomHook()
 
 
     return (
-        <div className="App wrapper">
-            <header>
-                <h1>Namer</h1>
-            </header>
-            
+        <div className="App container">
+
             <main>
-                <form class="form" onSubmit={handleSubmit}>
+                <form className="form" onSubmit={handleSubmit}>
                     <label htmlFor="newName">Gamer Tag Generator</label>
-                    <input
-                        type="text"
+                    <TextInput
                         id="newName"
-                        
-                        //use the value attribute to se the state of the input// userInput state to keep track of input as it changes
+                        placeholder="type your name"
                         value={userInput}
-                        onChange={(e) => setUserInput(e.target.value)}
-                        
+                        onChange={handleInput}
                     />
-                    <button onClick={apiGet}>GENERATE</button>
-                    
+                    <Button
+                        onClick={apiGet}
+                        text="GENERATE" />
+                    <Button
+                        onClick={clearInput}
+                        text="RESET"
+                    />
                 </form>
-                    <p>{ userInput }{ randomWord }</p>
+                <p>{userInput}{randomWord}</p>
             </main>
         </div>
     );
