@@ -30,7 +30,9 @@ function Api() {
                         text="RESET"
                     />
                 </form>
-                <p>{userInput}{randomWord}</p>
+                {randomWord.map(word =>
+                    <p>{word}</p>
+                    )}
             </main>
         </div>
     );
