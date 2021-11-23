@@ -1,5 +1,4 @@
 import Api from './Api.js';
-import './app.css';
 // const [data, setData] = useState([]);
 
 function App() {
