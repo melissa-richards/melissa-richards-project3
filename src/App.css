@@ -15,15 +15,12 @@ body {
   border: 2px solid lime;
   border-image: linear-gradient(45deg, rgb(1, 26, 255), rgb(224, 47, 255)) 1;
   box-shadow: linear-gradient(45deg, rgb(1, 26, 255), rgb(224, 47, 255)) 1;
-  
   background-size: 40px 40px;
-  background-image:
-    linear-gradient(to right, rgb(255, 255, 255) 1px, transparent 1px),
+  background-image: linear-gradient(to right, rgb(255, 255, 255) 1px, transparent 1px),
     linear-gradient(to bottom, rgb(255, 255, 255) 1px, transparent 1px);
-
 }
 .container {
-    margin-bottom: 10%;
+  margin-bottom: 10%;
 }
 
 header {
@@ -45,7 +42,6 @@ h1 {
     -0.025em 0.025em 0 rgb(60, 177, 14, 0.75);
   animation: glitch 5s linear infinite;
 }
-
 
 @keyframes glitch {
   2% {
@@ -131,7 +127,7 @@ input {
 label {
   font-family: "Cute Font", cursive;
   font-size: 2rem;
-  color:rgb(1, 26, 255);
+  color: rgb(1, 26, 255);
   background-color: black;
   color: rgb(255, 255, 255);
   border: 3px solid rgb(255, 255, 255);
@@ -163,12 +159,21 @@ footer {
     margin: 0 auto;
     border: none;
     border-image: none;
+    background-image: none;
   }
 
   p {
     padding: 15px 0;
     margin-top: 30px;
-    font-size: 1.3rem;
-    color: black;
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1450px) {
+  form {
+    width: 430px;
+  }
+  input {
+    width: 100%;
   }
 }
