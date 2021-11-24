@@ -6,41 +6,52 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  caret-color: red;
 }
 
 .wrapper {
-  width: 68%;
+  width: 60%;
   margin: 15% auto;
   border: 2px solid lime;
   border-image: linear-gradient(45deg, rgb(1, 26, 255), rgb(224, 47, 255)) 1;
+  box-shadow: linear-gradient(45deg, rgb(1, 26, 255), rgb(224, 47, 255)) 1;
+  
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgb(255, 255, 255) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255, 255, 255) 1px, transparent 1px);
+
+}
+.container {
+    margin-bottom: 10%;
 }
 
 header {
   padding: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   text-align: center;
 }
 
 h1 {
-  width: 200px;
-  height: 8%;
-  font-size: 3.3rem;
-  background-color: rgb(0, 0, 0);
+  font-family: "Cute Font", cursive;
+  font-size: 7rem;
+  margin: 0;
+  padding: 0;
   color: white;
   text-transform: uppercase;
   text-shadow: 0.05em 0 0 rgba(255, 47, 227, 0.75), -0.05em -0.025em 0 rgb(0, 38, 255, 0.75),
     -0.025em 0.025em 0 rgb(60, 177, 14, 0.75);
-  animation: glitch 1s initial;
-  animation: glitch 1s linear initial;
+  animation: glitch 5s linear infinite;
 }
 
+
 @keyframes glitch {
-  2%,
-  64% {
+  2% {
     transform: translate(2px, 0) skew(0deg);
   }
-  4%,
+
   60% {
     transform: translate(-2px, 0) skew(0deg);
   }
@@ -96,41 +107,6 @@ div:after {
   }
 }
 
-/* @keyframes glitch {
-    0% {
-        text-shadow: 0.05em 0 0 rgb(255, 47, 57, 0.75), -0.05em -0.025em 0 rgb(0, 38, 255, 0.75),
-            -0.025em 0.025em 0 rgb(60, 177, 14, 0.75);
-    }
-    9% {
-        text-shadow: 0.05em 0 0 rgb(255, 0, 255, 0.75), -0.05em -0.025em 0 rgb(0, 38, 255, 0.75),
-            -0.025em 0.025em 0 rgb(60, 177, 14, 0.75);
-    }
-    10% {
-        text-shadow: -0.05em -0.025 0 rgb(255, 0, 255, 0.75), 0.025em 0.025em 0 rgb(0, 38, 255, 0.75),
-            -0.02em -0.02em 0 rgb(60, 177, 14, 0.75);
-    }
-    50% {
-        text-shadow: -0.05em -0.025 0 rgb(255, 0, 255, 0.75), 0.025em 0.025em 0 rgb(0, 38, 255, 0.75),
-            -0.02em -0.02em 0 rgb(60, 177, 14, 0.75);
-    }
-    60% {
-        text-shadow: -0.05em -0.025 0 rgb(255, 0, 255, 0.75), 0.025em 0.025em 0 rgb(0, 38, 255, 0.75),
-            -0.02em -0.02em 0 rgb(60, 177, 14, 0.75);
-    }
-    61% {
-        text-shadow: -0.025em 0 0 rgb(255, 0, 255, 0.75), -0.025em -0.025em 0 rgb(0, 38, 255, 0.75),
-            -0.025em -0.05em 0 rgb(60, 177, 14, 0.75);
-    }
-    99% {
-        text-shadow: 0.025em 0.05 0 rgb(255, 0, 255, 0.75), 0.05em 0 0 rgb(0, 38, 255, 0.75),
-            0 -0.05em 0 rgb(60, 177, 14, 0.75);
-    }
-    100% {
-        text-shadow: 0.025em 0.05 0 rgba(255, 0, 255, 0.75), 0.05em 0 0 rgb(0, 38, 255, 0.75),
-            0 -0.05em 0 rgb(60, 177, 14, 0.75);
-    }
-} */
-
 main {
   display: flex;
   flex-direction: column;
@@ -140,27 +116,36 @@ main {
 
 form {
   margin: 0 auto;
-  margin-bottom: 10%;
-  width: 40%;
+  width: 50%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   text-align: center;
 }
 
+input {
+  margin-bottom: 20px;
+}
+
 label {
-  font-family: "M PLUS 1";
-  color: lime;
+  font-family: "Cute Font", cursive;
+  font-size: 2rem;
+  color:rgb(1, 26, 255);
   background-color: black;
-  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 5px 5px 0px rgb(255, 255, 255);
+  background: rgb(211, 99, 255);
   padding: 5px;
+  width: 100%;
 }
 
 footer {
   text-align: center;
   text-transform: uppercase;
-  font-family: Impact;
-  font-size: 1rem;
+  font-family: "Cute Font", cursive;
+  font-size: 2rem;
   color: white;
   padding: 20px;
 }

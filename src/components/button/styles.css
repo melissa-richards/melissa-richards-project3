@@ -1,13 +1,22 @@
 .button {
-    color: black;
-    box-shadow: 5px 5px 0px black;
-    background: lime;
+    color: rgb(255, 238, 0);
+    box-shadow: 5px 5px 0px rgb(255, 238, 0);
+    background: rgb(255, 0, 157);
     border: none;
-    padding: 10px;
+    border-radius: 100%;
+    padding: 20px;
     font-family: Impact;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
     outline: inherit;
-    margin-top: 10px;
-    width: 100%;
+    width: 126px;
+    font-family: 'Cute Font', cursive;
+}
+.button:hover {background-color: rgb(38, 0, 255)}
+
+.button:active {
+  background-color: #09ff00;
+  color: rgb(255, 72, 0);
+  box-shadow: 0 5px rgb(255, 72, 0);
+  transform: translateY(4px);
 }

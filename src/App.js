@@ -7,7 +7,7 @@ function App() {
   return <div className="App">
       <div className="wrapper">
         <header>
-          <h1>Namer</h1>
+          <h1 className="glitch">Namer</h1>
         </header>
         <Api />
       </div>
