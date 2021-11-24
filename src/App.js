@@ -11,6 +11,7 @@ function App() {
         </header>
         <Api />
       </div>
+      <footer>Created at Juno College 2021</footer>
     </div> 
 
 }

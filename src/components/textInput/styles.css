@@ -1,0 +1,11 @@
+input {
+  margin-top: 20px;
+  height: 37px;
+  border: 3px solid black;
+  box-shadow: 3px 3px 0px black;
+  text-transform: uppercase;
+  font-family: Impact;
+  font-size: 1.5rem;
+  text-align: center;
+  color: lime;
+}

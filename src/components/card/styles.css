@@ -1,0 +1,20 @@
+.cardContainer {
+    color: black;
+    box-shadow: 4px 4px 0px black;
+    border: 3px solid rgb(183, 0, 255);
+    border-image: linear-gradient(45deg, turquoise, greenyellow) 1;
+    font-family: Impact;
+    padding: 25px;
+    margin: 30px;
+}
+.cardWord {
+    font-size: 3rem;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.cardDefinition {
+    font-size: 1rem;
+    letter-spacing: 5px;
+}

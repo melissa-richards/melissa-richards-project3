@@ -1,4 +1,4 @@
-
+import "./styles.css"
 const TextInput = ({id, placeholder, value, onChange}) => {
     
     return (

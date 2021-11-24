@@ -1,13 +1,13 @@
 import React from "react";
 import './App.css';
 import { Button } from "./components/button";
-import TextInput from "./components/textInput"
-import useCustomHook from './hooks/useCustomHook'
-
+import TextInput from "./components/textInput";
+import useCustomHook from "./hooks/useCustomHook";
+import Card from "./components/card"
 
 function Api() {
 
-    const { randomWord, userInput, apiGet, handleSubmit, clearInput, handleInput} = useCustomHook()
+    const { randomWord, userInput, apiGet, handleSubmit, clearInput, handleInput } = useCustomHook()
 
 
     return (
@@ -31,8 +31,18 @@ function Api() {
                     />
                 </form>
                 {randomWord.map(word =>
-                    <p>{word}</p>
-                    )}
+                    {
+                    console.log(word)
+                    return (
+                        <Card
+                            key={word.word}
+                            word={word.word}
+                            definition={word.definition}
+                        />
+                    )
+                    
+                }
+                )}
             </main>
         </div>
     );

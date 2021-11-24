@@ -9,10 +9,9 @@ function useData () {
             .then((response) => response.json())
             .then((json) => {
                 console.log(json);
-                console.log(json[0].word);
-                const state = [...randomWord]
-                state.unshift(userInput + json[0].word);
-                setRandomWord(state);
+                const result = { word: userInput + json[0].word, definition: json[0].definition}
+                console.log(result)
+                setRandomWord([result, ...randomWord]);
             });
     };
     console.log(randomWord);
