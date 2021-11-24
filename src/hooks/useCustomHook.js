@@ -23,6 +23,13 @@ function useData () {
         const nameTag = { userInput };
         console.log({ nameTag }, JSON.stringify(nameTag));
     }
+
+    const handleExit = (removeWord) => {
+        const updatedWords = randomWord.filter((wordObject) => {
+            return (wordObject.word !== removeWord)
+        })
+        setRandomWord([...updatedWords])
+    }
     
     const clearInput = () => {
         setUserInput('');
@@ -31,7 +38,7 @@ function useData () {
 
     const handleInput = (e) => setUserInput(e.target.value)
 
-    return {randomWord, setRandomWord, userInput, setUserInput, apiGet, handleSubmit, clearInput, handleInput}
+    return {randomWord, setRandomWord, userInput, setUserInput, apiGet, handleSubmit, clearInput, handleInput, handleExit}
 }
 
 export default useData

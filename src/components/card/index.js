@@ -1,10 +1,22 @@
 import "./styles.css"
-function Card({ word, definition }) {
+function Card({ word, definition, exit }) {
+
+    const handleCopy = () => {
+        navigator.clipboard.writeText(word)
+    }
+
+
     return (
         <>
             <div className="cardContainer">
-                <p className="cardWord">{word}</p>
-                <p className="cardDefinition">{definition}</p>
+                <div className="copyExit">
+                    <p className="cardWord">{word}</p>
+                    <button className="copy" onClick={handleCopy}><i className="fas fa-copy"></i></button>
+                    <button className="exit" onClick={() => exit(word)}>X</button>
+                </div>
+                <div className="wordDefinition">
+                    <p className="cardDefinition">{definition}</p>
+                </div>
             </div>
         </>
     );

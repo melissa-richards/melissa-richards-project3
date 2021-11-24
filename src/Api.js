@@ -7,7 +7,7 @@ import Card from "./components/card"
 
 function Api() {
 
-    const { randomWord, userInput, apiGet, handleSubmit, clearInput, handleInput } = useCustomHook()
+    const { randomWord, userInput, apiGet, handleSubmit, clearInput, handleInput, handleExit } = useCustomHook()
 
 
     return (
@@ -38,6 +38,7 @@ function Api() {
                             key={word.word}
                             word={word.word}
                             definition={word.definition}
+                            exit={handleExit}
                         />
                     )
                     
