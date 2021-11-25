@@ -5,20 +5,18 @@
     border: 3px solid rgb(255, 81, 0);
     border-image: linear-gradient(45deg, turquoise, greenyellow) 1;
     font-family: "Cute Font", cursive;
-    width: 60%;
+    width: 100%;
     margin: 5% auto;
-    
+    max-width: 600px;
 }
 
 .cardWord {
     font-size: 3rem;
     padding: 0;
     margin: 0 auto;
-    /* text-transform: uppercase; */
     letter-spacing: 3px;
     font-family: "Cute Font", cursive;
     word-break: break-all;
-  
 }
 
 .cardDefinition {
@@ -34,6 +32,14 @@
     justify-content: flex-end;
     padding: 0 3px;
     border: 3px solid orangered;
+}
+
+.copy:focus {
+    border: 2px dotted rgb(255, 98, 41);
+}
+
+.exit:focus {
+    border: 2px dotted rgb(255, 98, 41);
 }
 
 .exit {
@@ -54,26 +60,23 @@
     border: none;
     font: inherit;
     cursor: pointer;
+    outline: none;
     font-size: 1.7rem;
     margin: 0;
 }
 
-@media (max-width: 750px) { 
-    /* .cardWord {
+@media (max-width: 750px) {
+    .cardWord {
         font-size: 2rem;
         padding-top: 10px;
-    } */
+    }
     .cardContainer {
         width: 90%;
     }
 }
 
 @media (max-width: 490px) {
-    /* .cardWord {
+    .cardContainer {
         width: 100%;
-        font-size: 1.5rem;
-        padding: 10px 0; */
-        .cardContainer {
-            width: 100%;
-        }
     }
+}

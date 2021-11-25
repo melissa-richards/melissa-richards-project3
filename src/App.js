@@ -1,22 +1,19 @@
-import Api from './Api.js';
-// const [data, setData] = useState([]);
+import Api from "./Api.js";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 function App() {
   
-
+//render the application
   return <div className="App">
       <div className="wrapper">
-        <header>
-          <h1 className="glitch">Namer</h1>
-        </header>
+        <Header />
         <Api />
       </div>
-      <footer>Created at Juno College 2021</footer>
+      <Footer />
     </div> 
 
 }
-
-
 
 export default App;
 
@@ -37,4 +34,4 @@ export default App;
 // multiple tags show up on the page
 //the user can input many different names one after another to populate the page
 //when the button is pushed an animation happens
-//liked tags are stored in a list like a shopping bag
+//liked tags are stored in a list like a shopping bag<did not complete

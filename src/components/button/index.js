@@ -1,10 +1,10 @@
 import "./styles.css"
-// onClick = { apiGet }
-export function Button ({onClick, text}) {
+//
+function Button ({onClick, text, type = 'button', ...props}) {
     return (
-        <button className='button' onClick={onClick}>{text}</button>
+        <button type={type} className='button' onClick={onClick} {...props}>{text}</button>
     );
 
 };
 
-// export default Button;
+export default Button
