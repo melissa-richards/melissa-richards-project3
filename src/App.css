@@ -145,9 +145,10 @@ label {
   }
 }
 
+
 @media (max-width: 490px) {
   form {
-    width: 430px;
+    width: 100%;
     margin: 0 auto;
     border: none;
     border-image: none;
@@ -163,6 +164,7 @@ label {
 @media (min-width: 1450px) {
   form {
     width: 430px;
+    padding-bottom: 5%;
   }
   input {
     width: 100%;

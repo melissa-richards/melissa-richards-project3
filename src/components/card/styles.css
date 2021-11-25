@@ -80,3 +80,12 @@
         width: 100%;
     }
 }
+
+@media (max-width: 390px) {
+    .cardWord{
+        font-size: 1.5rem;
+    }
+    .cardDefinition {
+        font-size: 1.3rem;
+    }
+}

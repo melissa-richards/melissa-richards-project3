@@ -18,3 +18,9 @@ footer a:focus {
 footer a:hover {
     color: rgb(255, 230, 0);
 }
+
+@media (max-width: 460px) {
+    footer{
+        font-size: 1.5rem;
+    }
+}
