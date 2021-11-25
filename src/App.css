@@ -7,8 +7,6 @@ html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}bo
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 body {
-  /* border: 20px solid lime;
-    border-image: linear-gradient(35deg, rgb(47, 0, 255), rgb(255, 255, 255)) 1; */
   height: 100vh;
   background-image: url(./assets/backgroundImageNamer.jpg);
   background-repeat: no-repeat;
@@ -31,12 +29,13 @@ body {
   margin-bottom: 10%;
 }
 
+/* these keyframes were inspired by a weblink codemyui.com from Adrian  */
+/* I used two guides and a youtube video by codercoder to compile this code */
 
 @keyframes glitch {
   2% {
     transform: translate(2px, 0) skew(0deg);
   }
-
   60% {
     transform: translate(-2px, 0) skew(0deg);
   }
